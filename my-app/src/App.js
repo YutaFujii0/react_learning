@@ -14,8 +14,13 @@ class App extends Component {
     ]
   }
 
-  changeNameHandler = () => {
-    console.log('Was clicked!');
+  changeNameHandler = (e) => {
+    this.setState( {
+      users: [
+        {name: e.target.value},
+        {name: "Mike"}
+      ]
+    })
   }
 
   render() {
